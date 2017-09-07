@@ -26,7 +26,7 @@ Vue.use(VueResource);
 // let app = Vue.extend(App);
 
 const routes = [
-  {path: '/',component: goods},
+  {path: '/',redirect: '/goods'},
   {path: '/goods',component: goods},
   {path: '/seller',component: seller},
   {path: '/ratings',component: ratings}
