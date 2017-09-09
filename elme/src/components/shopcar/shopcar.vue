@@ -20,25 +20,25 @@
 
   	</div>
   	<transition name="fold">
-  	<div class="shopcar-list" v-show="listShow">
-  		<div class="list-header">
-  			<h1 class="title">购物车</h1>
-  			<span class="empty">清空</span>
-  		</div>
-  		<div class="list-content">
-  			<ul>
-  				<li class="food" v-for="food in selectFoods">
-  					<span class="name">{{food.name}}</span>
-  					<div class="price">
-  						<span>￥{{food.price*food.count}}</span>
-  					</div>
-  					<div class="carcontrol-wrapper">
-  						<carcontrol :food="food"></carcontrol>
-  					</div>
-  				</li>
-  			</ul>
-  		</div>
-  	</div>
+  	  <div class="shopcar-list" v-show="listShow">
+  		  <div class="list-header">
+  			  <h1 class="title">购物车</h1>
+  			  <span class="empty">清空</span>
+  		  </div>
+  		  <div class="list-content">
+  			  <ul>
+  				  <li class="food" v-for="food in selectFoods">
+  					  <span class="name">{{food.name}}</span>
+  					  <div class="price">
+  						  <span>￥{{food.price*food.count}}</span>
+  					  </div>
+  					  <div class="carcontrol-wrapper">
+  						  <carcontrol :food="food"></carcontrol>
+  					  </div>
+  				  </li>
+  			  </ul>
+  		  </div>
+  	  </div>
   	</transition>
   	
   </div>
@@ -226,6 +226,7 @@ import carcontrol from "../carcontrol/carcontrol";
       // &.fold-transition
       &.fold-enter-active, .fold-leave-active
         transition: all 0.5s linear
+      &.fold-enter-active
         transform: translate3d(0, -100%, 0)
         // z-index: 50
       // &.fold-enter-active
